@@ -6,6 +6,7 @@ public class Play : MonoBehaviour
 {
    [SerializeField] private Button _play;
    [SerializeField] private Animator _animator;
+   [SerializeField] private ParticleSystem _spell;
 
    
    
@@ -18,5 +19,6 @@ public class Play : MonoBehaviour
    private void PlayAnimation()
    {
      _animator.SetTrigger("Spell");
+     _spell.Play();
    }
 }
